@@ -6,11 +6,11 @@ AWS Identity and Access Management\(IAM\) 사용자는 AWS에서 생성하는 �
 
 AWS 관리 콘솔에서 "**서비스 - IAM - 사용자"** 를 선택합니다.
 
-![](.gitbook/assets/image%20%2823%29.png)
+![](.gitbook/assets/image%20%2824%29.png)
 
 **사용자 추가**를 선택합니다.
 
-![](.gitbook/assets/image%20%2821%29.png)
+![](.gitbook/assets/image%20%2822%29.png)
 
 첫번째 단계로, 9명의 새로운 사용자를 추가합니다.
 
@@ -18,19 +18,19 @@ AWS 관리 콘솔에서 "**서비스 - IAM - 사용자"** 를 선택합니다.
 * 액세스 유형 - 프로그래밍 액세스, AWS Management Console 액세스 선택
 * 콘솔비밀번호 - 사용자 지정 비밀번호 선택 및 비밀번호 입력
 
-![](.gitbook/assets/image%20%2842%29.png)
+![](.gitbook/assets/image%20%2844%29.png)
 
 두번째 단계에서, 기존 그룹에 사용자를 추가하거나 , 기존 사용자에서 권한\(permission\) 복사, 기존 정책\(Policy\)에 직접 연결할 수 있습니다. 또한 권한 경계 설정을 할 수 있습니다.이 단계는 별도 설정하지 않습니다.
 
-![](.gitbook/assets/image%20%2844%29.png)
+![](.gitbook/assets/image%20%2846%29.png)
 
 세번째 단계에서는 태그를 추가할 수 있습니다. 이 단계에서는 별도 설정하지 않습니다.
 
-![](.gitbook/assets/image%20%2843%29.png)
+![](.gitbook/assets/image%20%2845%29.png)
 
 네번째 단계에서는 앞서 구성된 단계들의 설정 내용을 검토합니다. 앞서 사용자 생성 이외에는 별도의 생성을 하지 않았습니다. 사용자 만들기를 최종 선택합니다.
 
-![](.gitbook/assets/image%20%2831%29.png)
+![](.gitbook/assets/image%20%2833%29.png)
 
 최종적으로 생성된 사용자\(User\)들의 구성 내역을 살펴봅니다.
 
@@ -50,7 +50,7 @@ AWS 관리 콘솔의 IAM Side Bar에서 그룹을 선택하고 **새로운 그�
 
 첫번째 단계에서 그룹이름을 설정합니다.
 
-![](.gitbook/assets/image%20%2840%29.png)
+![](.gitbook/assets/image%20%2842%29.png)
 
 두번째 단계에서 정책\(Policy\)연결을 설정합니다. 
 
@@ -100,17 +100,17 @@ MFA는 사용자가 AWS 웹 사이트 또는 서비스에 액세스할 때 사�
 
 이 랩에서는 captain 사용자\(User\)에 MFA 인증을 구성해 봅니다. 먼저 사용자가 소유한 스마트폰에서 OTP 인증 앱을 설치합니다. 안드로이드, iOS사용자는 Google의 OTP를 설치합니다.
 
-![](.gitbook/assets/image%20%2835%29.png)
+![](.gitbook/assets/image%20%2837%29.png)
 
 ![](.gitbook/assets/image%20%2813%29.png)
 
 AWS 관리 콘솔에서 IAM - 대시보드 - 사용자를 선택하고, 사용자 "captain"을 선택합니다.
 
-![](.gitbook/assets/image%20%2830%29.png)
+![](.gitbook/assets/image%20%2832%29.png)
 
 사용자 요약 화면에서 **"보안자격증명"**을 선택하고, **할당된 MFA 디바이스 - 관리**를 선택합니다.
 
-![](.gitbook/assets/image%20%2828%29.png)
+![](.gitbook/assets/image%20%2829%29.png)
 
 MFA 디바이스 관리화면에서 **"가상 MFA 디바이스"**를 선택합니다.
 
@@ -122,15 +122,15 @@ MFA 디바이스 관리화면에서 **"가상 MFA 디바이스"**를 선택합�
 
 QR 코드 표시를 선택하면, QR 코드가 나타납니다. 앞서 스마트폰에 설치한 Google Authenticator를 이용해서 QR Code를 촬영하고, 가상 OTP를 추가합니다.
 
-![](.gitbook/assets/image%20%2839%29.png)
+![](.gitbook/assets/image%20%2841%29.png)
 
 가상 OTP를 추가하게 되면 아래와 같이 OTP가 생성되고, 2개의 MFA OTP  번호를 입력합니다.
 
-![](.gitbook/assets/image%20%2838%29.png)
+![](.gitbook/assets/image%20%2840%29.png)
 
 AWS 관리 콘솔에서 아래와 같이 가상 MFA 디바이스 설정을 완료합니다.
 
-![](.gitbook/assets/image%20%2834%29.png)
+![](.gitbook/assets/image%20%2836%29.png)
 
 이제 관리 콘솔에서 로그아웃을 하고 "captain" 사용자로 로그인합니다.
 
