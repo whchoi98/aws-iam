@@ -32,10 +32,6 @@ AWS 인라인 정책은 1 to 1 정책으로 명시적으로 할당되는 정책�
 
 ![](.gitbook/assets/image%20%2845%29.png)
 
-
-
-
-
 ## **사용자 권한 추가**
 
 ### 사용자 권한 추가
@@ -203,7 +199,7 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 
 ## 그룹 정책
 
-
+### 그룹에 사용자 추가
 
 | Group | Policy | User | Policy |
 | :--- | :--- | :--- | :--- |
@@ -224,6 +220,8 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 ![](.gitbook/assets/image%20%286%29.png)
 
 ![](.gitbook/assets/image%20%2829%29.png)
+
+### 그룹 정책과 사용자 정책 관계 확인
 
 ![](.gitbook/assets/image%20%2838%29.png)
 
