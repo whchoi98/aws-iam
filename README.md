@@ -1,2 +1,2 @@
-# Initial page
+# IAM Hands On Lab
 
