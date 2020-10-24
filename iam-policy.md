@@ -22,7 +22,7 @@ IAM에서 자격 증명에 대한 권한을 설정해야 할 경우 AWS 관리�
 
 고객이 관리하는 정책을 생성하는 좋은 방법은 AWS에서 관리하는 기존의 정책을 복사하여 시작하는 것입니다. 이렇게 하면 시작 시 올바른 정책으로 시작하므로 해당 환경에 맞게 사용자 지정만 하면 됩니다. 고객 관리형 정책은 만들어진 Account에서만 사용할 수 있습니다.
 
-![\[AWS &#xACE0;&#xAC1D; &#xAD00;&#xB9AC;&#xD615; &#xC815;&#xCC45;\]](.gitbook/assets/image%20%2830%29.png)
+![\[AWS &#xACE0;&#xAC1D; &#xAD00;&#xB9AC;&#xD615; &#xC815;&#xCC45;\]](.gitbook/assets/image%20%2831%29.png)
 
 ![](.gitbook/assets/image%20%2819%29.png)
 
@@ -30,7 +30,7 @@ AWS 인라인 정책
 
 AWS 인라인 정책은 1 to 1 정책으로 명시적으로 할당되는 정책입니다.따라서 IAM 자격 증명\(사용자, 그룹 또는 역할\)에 포함되는 정책입니다. 즉, 정책은 자격 증명의 고유한 부분입니다. Lab에서 명시적 접근 거부로 확인합니다.
 
-![](.gitbook/assets/image%20%2844%29.png)
+![](.gitbook/assets/image%20%2845%29.png)
 
 
 
@@ -67,7 +67,7 @@ AWS 인라인 정책은 1 to 1 정책으로 명시적으로 할당되는 정책�
 
 5. 정책 시뮬레이션을 선택합니다.
 
-![](.gitbook/assets/image%20%2840%29.png)
+![](.gitbook/assets/image%20%2841%29.png)
 
 IAM 정책 시뮬레이션은 현재 적용된 정책이 어떤 권한을 가지고, 자원을 사용할 수 있는지를 평가해 주는 도구입니다.
 
@@ -97,11 +97,11 @@ IAM 정책 시뮬레이션은 현재 적용된 정책이 어떤 권한을 가지
 
 * hulk - EC2 인스턴스를 생성해 봅니다. 아래와 같은 에러메세지를 출력합니다.
 
-![](.gitbook/assets/image%20%2849%29.png)
+![](.gitbook/assets/image%20%2850%29.png)
 
 * hawkeye - EC2 인스턴스를 생성해 봅니다. 정상적으로 EC2 인스턴스를 생성할 수 있습니다. 하지만 S3 버킷을 생성할 수 없습니다.
 
-![](.gitbook/assets/image%20%2835%29.png)
+![](.gitbook/assets/image%20%2836%29.png)
 
 * ironman - S3 버킷을 생성할 수 있습니다. 하지만 EC2에 대한 정책 권한이 없으므로 아래와 같이 에러가 발생합니다.
 
@@ -109,7 +109,7 @@ IAM 정책 시뮬레이션은 현재 적용된 정책이 어떤 권한을 가지
 
 * blackpanther - S3를 조회할 수는 있지만, S3를 생성할 수 있는 정책 권한이 없으므로 아래와 같이 에러가 발생합니다.
 
-![](.gitbook/assets/image%20%2853%29.png)
+![](.gitbook/assets/image%20%2854%29.png)
 
 ![](.gitbook/assets/image%20%2824%29.png)
 
@@ -137,7 +137,7 @@ AmazonEC2FullAccess 정책에는 EC2 이외에도 ELB, Cloudwatch와 같은 접�
 
 IAM - 대시보드 - 사용자 - hawkeye - 인라인 정책 추가 선택
 
-![](.gitbook/assets/image%20%2854%29.png)
+![](.gitbook/assets/image%20%2855%29.png)
 
 hawkeye 사용자에게 Cloudwatch 에 대한 접근을 거부하려고 합니다. 아래와 같이 추가합니다.
 
@@ -185,7 +185,7 @@ hawkeye 사용자에게 Cloudwatch 에 대한 접근을 거부하려고 합니�
 
 인라인 정책 이름을 정의하고 정책을 설정합니다. 인라인 정책은 해당 Account -  사용자\(User\)에서만 정의 됩니다.
 
-![](.gitbook/assets/image%20%2832%29.png)
+![](.gitbook/assets/image%20%2833%29.png)
 
 4. 정책을 확인합니다.
 
@@ -199,7 +199,7 @@ hawkeye 사용자는 AWS 관리형 정책 - AmazonEC2FullAccess 권한을 통해
 
 Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 
-![](.gitbook/assets/image%20%2836%29.png)
+![](.gitbook/assets/image%20%2837%29.png)
 
 ## 그룹 정책
 
@@ -225,5 +225,7 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 
 ![](.gitbook/assets/image%20%2829%29.png)
 
-![](.gitbook/assets/image%20%2837%29.png)
+![](.gitbook/assets/image%20%2838%29.png)
+
+![](.gitbook/assets/image%20%2830%29.png)
 
