@@ -36,6 +36,12 @@ AWS 관리 콘솔에서 "**서비스 - IAM - 사용자"** 를 선택합니다.
 
 ![](.gitbook/assets/image%20%283%29.png)
 
+{% hint style="info" %}
+생성된 각 사용자\(user\)는 Amazon 리소스 이름\(ARN\)입니다. 모든 AWS 전반에 사용자를 특별하게 식별할 필요가 있는 경우 ARN을 사용합니다. 예를 들어, ARN을 사용하여 사용자를 Amazon S3 버킷에 대한 IAM 정책에서 **`Principal`**로서 지정할 수 있습니다. IAM 사용자의 ARN은 다음과 같은 모습입니다.사용자의 ARN은 AWS 관리 콘솔 내 보안 자격 증명 또는 권한이 있는 사용자의 사용자요약에서 확인 할 수 있습니다.
+
+arn:aws:iam::xxxxxxxxxxxx:user/whchoi
+{% endhint %}
+
 ## IAM Group 구성
 
 AWS 관리 콘솔의 IAM Side Bar에서 그룹을 선택하고 **새로운 그룹 생성**을 선택합니다.
