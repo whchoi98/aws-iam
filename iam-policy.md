@@ -6,14 +6,19 @@ IAM에서 자격 증명에 대한 권한을 설정해야 할 경우 AWS 관리�
 
 정책 타입은 아래와 같이 6가지로 분류됩니다.\(참조 - [https://docs.aws.amazon.com/ko\_kr/IAM/latest/UserGuide/access\_policies.html](https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/access_policies.html)\)
 
-* 자격 증명 기반 \(Identity-based policies\)
+* **자격 증명 기반 \(Identity-based policies\)**
+  * **AWS 관리형 정책 - AWS에서 제공하는 글로벌 적용**
+  * **AWS 고객 관리형 정책 - 고객의 계정에서 생성해서 사용관리.**
+  * **AWS 인라인 정책 - 단일 사용자, 그룹, 역할\(Role\)에 직접 추가하는 방식.**
 * 리소스 정책 기반 \(Resource-based policies\)
-* 권한 경계 기반 정책 \(Permissions boundaries\)
+* **권한 경계 기반 정책 \(Permissions boundaries\)**
 * 조직 SCP 기반 정책 \(Organizations SCPs\)
 * 액세스 제어 리스트 \(Access control lists -ACLs\)
 * 세션 정책 \(Session policies\)
 
 ## Identity-Based Policy 
+
+ID 기반 정책은 ID\(사용자, 사용자 그룹 및 역할\)가 수행할 수 있는 작업, 리소스 및 조건을 제어하는 JSON 권한 정책 문서입니다. 자격 증명 기반 정책을 추가로 분류할 수 있습니다.
 
 ### 1. AWS 관리형 정책 \(AWS Managed Policy\)
 
@@ -138,7 +143,7 @@ IAM 정책 시뮬레이션은 현재 적용된 정책이 어떤 권한을 가지
 * thor - EC2,S3에 대한 접근권한과 Read권한을 가지고 있으므로 , 생성할 수는 없습니다.
 * thanos - Admin권한을 가지고 있으므로 captain과 동일하게 모두 접근 가능합니다.
 
-## 명시적 접근 거부 **이해**
+## 인라인 정책
 
 앞서 사용자 "hawkeye"는 관리형 정책을 통해 "AmazonEC2FullAccess" 정책에 대한 권한을 적용하였습니다. 관리형 정책에 부여된 정책 가운데, 필요에 따라서 거부하는 것을 구성해 봅니다. 이때 인라인 정책을 구성해서 확인해 봅니다.
 
@@ -296,9 +301,7 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 
 ### 권한 경계 \(Permission Boundary\)란?
 
-
-
-
+권한 경계는 자격 증명 기반 정책을 통해 IAM 엔터티에 부여할 수 있는 최대 권한을 설정하는 고급 기능입니다. 엔터티에 대한 권한 경계를 설정할 경우 해당 엔터티는 자격 증명 기반 정책 및 관련 권한 경계 모두에서 허용되는 작업만 수행할 수 있습니다. 사용자나 역할을 보안 주체로 지정하는 리소스 기반 정책은 권한 경계에 제한을 받지 않습니다.
 
 ### Permission Boundary 설정
 
