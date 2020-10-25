@@ -4,6 +4,17 @@
 
 IAM에서 자격 증명에 대한 권한을 설정해야 할 경우 AWS 관리형 정책, 고객 관리형 정책 또는 인라인 정책 중 어느 것을 사용할지를 결정해야 합니다.
 
+정책 타입은 아래와 같이 6가지로 분류됩니다.\(참조 - [https://docs.aws.amazon.com/ko\_kr/IAM/latest/UserGuide/access\_policies.html](https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/access_policies.html)\)
+
+* 자격 증명 기반 \(Identity-based policies\)
+* 리소스 정책 기반 \(Resource-based policies\)
+* 권한 경계 기반 정책 \(Permissions boundaries\)
+* 조직 SCP 기반 정책 \(Organizations SCPs\)
+* 액세스 제어 리스트 \(Access control lists -ACLs\)
+* 세션 정책 \(Session policies\)
+
+## Identity-Based Policy 
+
 ### 1. AWS 관리형 정책 \(AWS Managed Policy\)
 
 **AWS 관리형 정책**은 AWS에서 생성 및 관리하는 독립적인 정책입니다. 여기에서 독립적인 정책이란 정책 스스로 정책 이름이 포함된 Amazon 리소스 이름\(ARN\)을 갖고 있다는 것을 의미합니다. AWS 에서 대부분 제공되는 정책입니다. AWS에서 제공되는 정책이므로 글로벌하게 적용됩니다.
@@ -281,9 +292,9 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 그룹과 사용자의 정책이 적용되어 있을 경우, 한 군데라도 명시적 접근 허용이 있으면 자원에 접근할 수 있습니다. 하지만 명시적 접근 거부가 있는 경우 거부 정책을 우선합니다.
 {% endhint %}
 
-## Permissions Boundary
+## 권한 경계 \(Permissions Boundary\)
 
-### Permission Boundary란?
+### 권한 경계 \(Permission Boundary\)란?
 
 
 
