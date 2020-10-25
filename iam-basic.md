@@ -44,7 +44,7 @@ AWS 관리 콘솔에서 "**서비스 - IAM - 사용자"** 를 선택합니다.
 
 네번째 단계에서는 앞서 구성된 단계들의 설정 내용을 검토합니다. 앞서 사용자 생성 이외에는 별도의 생성을 하지 않았습니다. 사용자 만들기를 최종 선택합니다.
 
-![](.gitbook/assets/image%20%2849%29.png)
+![](.gitbook/assets/image%20%2858%29.png)
 
 ### 7.설정 확인
 
@@ -70,7 +70,7 @@ AWS 관리 콘솔의 IAM Side Bar에서 그룹을 선택하고 **새로운 그�
 
 첫번째 단계에서 그룹이름을 설정합니다.
 
-![](.gitbook/assets/image%20%2859%29.png)
+![](.gitbook/assets/image%20%2869%29.png)
 
 ### 3. 그룹에 정책 연결
 
@@ -154,11 +154,11 @@ MFA 디바이스 관리화면에서 **"가상 MFA 디바이스"**를 선택합�
 
 QR 코드 표시를 선택하면, QR 코드가 나타납니다. 앞서 스마트폰에 설치한 Google Authenticator를 이용해서 QR Code를 촬영하고, 가상 OTP를 추가합니다.
 
-![](.gitbook/assets/image%20%2858%29.png)
+![](.gitbook/assets/image%20%2868%29.png)
 
 가상 OTP를 추가하게 되면 아래와 같이 OTP가 생성되고, 2개의 MFA OTP  번호를 입력합니다.
 
-![](.gitbook/assets/image%20%2857%29.png)
+![](.gitbook/assets/image%20%2859%29.png)
 
 6. 가상 MFA 디바이스 설정 완료
 
