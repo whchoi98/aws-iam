@@ -34,8 +34,6 @@ AWS 인라인 정책은 1 to 1 정책으로 명시적으로 할당되는 정책�
 
 ## **사용자 권한 추가**
 
-\*\*\*\*
-
 ### 1.사용자 선택
 
 AWS 관리 콘솔에서 IAM을 선택하고, 대시보드에서 사용자를 선택합니다. 
@@ -253,23 +251,41 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 |  |  | spiderman | AmazonEC2FullAccess AmazonS3FullAccessk CloudWatchFullAccess |
 | Test |  | thor | AmazonEC2ReadOnlyAccess AmazonS3ReadOnlyAccess |
 
+### 2. 그룹에 사용자 추가
 
+생성된 5개 그룹에 각 사용자를 추가합니다. **"그룹에 사용자 추가"**를 선택하고 사용자를 추가합니다.
 
 ![](.gitbook/assets/image%20%2831%29.png)
 
 ![](.gitbook/assets/image%20%288%29.png)
 
+모두 추가하면 아래와 같이 그룹에 추가된 사용자의 수를 확인할 수 있습니다.
+
 ![](.gitbook/assets/image%20%2835%29.png)
 
-### 그룹 정책과 사용자 정책 관계 확인
+### 3. 그룹 정책과 사용자 정책 관계 확인
+
+앞서 이미 사용자에 정책 권한이 적용되어 있습니다. 또한 그룹에도 권한이 할당되어 있습니다. "blackpather"는 사용자 정책권한에 "S3ReadOnly"만 할당되어 있습니다. 
+
+"blackpather"로 사용자 로그인을 하고, S3 버킷을 만들어 봅니다. 아래와 같이 버킷이 만들어집니다.
 
 ![](.gitbook/assets/image%20%2845%29.png)
 
+"thor" 사용자는 정책 권한이 "EC2ReadOnly", "S3ReadOnly"가 할당되어 있습니다. 하지만 "thor"가 속해 있는 "Group - Test"에는 어떠한 권한도 할당되어 있지 않습니다. 
+
+"thor" 사용자 로그인을 시도합니다. "thor" 사용자에 할당된 정책권한으로 S3 버킷을 조회할 수 있는 확인합니다.
+
 ![](.gitbook/assets/image%20%2836%29.png)
+
+{% hint style="warning" %}
+그룹과 사용자의 정책이 적용되어 있을 경우, 한 군데라도 명시적 접근 허용이 있으면 자원에 접근할 수 있습니다. 하지만 명시적 접근 거부가 있는 경우 거부 정책을 우선합니다.
+{% endhint %}
 
 ## Permissions Boundary
 
 ### Permission Boundary란?
+
+
 
 
 
