@@ -10,7 +10,7 @@ IAM에서 자격 증명에 대한 권한을 설정해야 할 경우 AWS 관리�
 
 예를 들어 `arn:aws:iam::aws:policy/IAMReadOnlyAccess`는 AWS 관리형 정책입니다.
 
-![\[AWS &#xAD00;&#xB9AC;&#xD615; &#xC815;&#xCC45;\]](.gitbook/assets/image%20%2815%29.png)
+![\[AWS &#xAD00;&#xB9AC;&#xD615; &#xC815;&#xCC45;\]](.gitbook/assets/image%20%2816%29.png)
 
 ![](.gitbook/assets/image%20%283%29.png)
 
@@ -22,15 +22,15 @@ IAM에서 자격 증명에 대한 권한을 설정해야 할 경우 AWS 관리�
 
 고객이 관리하는 정책을 생성하는 좋은 방법은 AWS에서 관리하는 기존의 정책을 복사하여 시작하는 것입니다. 이렇게 하면 시작 시 올바른 정책으로 시작하므로 해당 환경에 맞게 사용자 지정만 하면 됩니다. 고객 관리형 정책은 만들어진 Account에서만 사용할 수 있습니다.
 
-![\[AWS &#xACE0;&#xAC1D; &#xAD00;&#xB9AC;&#xD615; &#xC815;&#xCC45;\]](.gitbook/assets/image%20%2833%29.png)
+![\[AWS &#xACE0;&#xAC1D; &#xAD00;&#xB9AC;&#xD615; &#xC815;&#xCC45;\]](.gitbook/assets/image%20%2835%29.png)
 
-![](.gitbook/assets/image%20%2821%29.png)
+![](.gitbook/assets/image%20%2823%29.png)
 
 AWS 인라인 정책
 
 AWS 인라인 정책은 1 to 1 정책으로 명시적으로 할당되는 정책입니다.따라서 IAM 자격 증명\(사용자, 그룹 또는 역할\)에 포함되는 정책입니다. 즉, 정책은 자격 증명의 고유한 부분입니다. Lab에서 명시적 접근 거부로 확인합니다.
 
-![](.gitbook/assets/image%20%2848%29.png)
+![](.gitbook/assets/image%20%2850%29.png)
 
 ## **사용자 권한 추가**
 
@@ -63,11 +63,11 @@ AWS 인라인 정책은 1 to 1 정책으로 명시적으로 할당되는 정책�
 
 5. 정책 시뮬레이션을 선택합니다.
 
-![](.gitbook/assets/image%20%2844%29.png)
+![](.gitbook/assets/image%20%2846%29.png)
 
 IAM 정책 시뮬레이션은 현재 적용된 정책이 어떤 권한을 가지고, 자원을 사용할 수 있는지를 평가해 주는 도구입니다.
 
-![](.gitbook/assets/image%20%2829%29.png)
+![](.gitbook/assets/image%20%2831%29.png)
 
 7. 이제 로그아웃을 하고, captain으로 Login을 합니다. 
 
@@ -93,11 +93,11 @@ IAM 정책 시뮬레이션은 현재 적용된 정책이 어떤 권한을 가지
 
 * hulk - EC2 인스턴스를 생성해 봅니다. 아래와 같은 에러메세지를 출력합니다.
 
-![](.gitbook/assets/image%20%2853%29.png)
+![](.gitbook/assets/image%20%2855%29.png)
 
 * hawkeye - EC2 인스턴스를 생성해 봅니다. 정상적으로 EC2 인스턴스를 생성할 수 있습니다. 하지만 S3 버킷을 생성할 수 없습니다.
 
-![](.gitbook/assets/image%20%2839%29.png)
+![](.gitbook/assets/image%20%2841%29.png)
 
 * ironman - S3 버킷을 생성할 수 있습니다. 하지만 EC2에 대한 정책 권한이 없으므로 아래와 같이 에러가 발생합니다.
 
@@ -105,9 +105,9 @@ IAM 정책 시뮬레이션은 현재 적용된 정책이 어떤 권한을 가지
 
 * blackpanther - S3를 조회할 수는 있지만, S3를 생성할 수 있는 정책 권한이 없으므로 아래와 같이 에러가 발생합니다.
 
-![](.gitbook/assets/image%20%2858%29.png)
+![](.gitbook/assets/image%20%2860%29.png)
 
-![](.gitbook/assets/image%20%2826%29.png)
+![](.gitbook/assets/image%20%2828%29.png)
 
 * doctor, spiderman - 같은 정책권한을 소유하고 있습니다. EC2,S3 전체 정책 권한과 Cloudwatch에 대한 권한을 가지고 있으므로 접근이 가능합니다.
 * thor - EC2,S3에 대한 접근권한과 Read권한을 가지고 있으므로 , 생성할 수는 없습니다.
@@ -121,7 +121,7 @@ IAM 정책 시뮬레이션은 현재 적용된 정책이 어떤 권한을 가지
 
 AWS 관리 콘솔 - IAM - 대쉬보드 - 사용자 - hawkeye 선택
 
-![](.gitbook/assets/image%20%2825%29.png)
+![](.gitbook/assets/image%20%2827%29.png)
 
 {% hint style="info" %}
 AWS 관리형 정책은 사용자들이 AWS 정책을 손쉽게 만들수 있도록 사전에 잘 만들어진 정책입니다. 해당 정책에는 단순히 해당 자원을 접근하기 위한 정책과 기타 연동성을 고려한 정책이 구성되어 있습니다. 따라서 필요에 따라 고객 관리형 정책을 사용할 때는 복사해서 사용하는 것이 좋습니다.
@@ -133,7 +133,7 @@ AmazonEC2FullAccess 정책에는 EC2 이외에도 ELB, Cloudwatch와 같은 접�
 
 IAM - 대시보드 - 사용자 - hawkeye - 인라인 정책 추가 선택
 
-![](.gitbook/assets/image%20%2859%29.png)
+![](.gitbook/assets/image%20%2861%29.png)
 
 hawkeye 사용자에게 Cloudwatch 에 대한 접근을 거부하려고 합니다. 아래와 같이 추가합니다.
 
@@ -181,13 +181,13 @@ hawkeye 사용자에게 Cloudwatch 에 대한 접근을 거부하려고 합니�
 
 인라인 정책 이름을 정의하고 정책을 설정합니다. 인라인 정책은 해당 Account -  사용자\(User\)에서만 정의 됩니다.
 
-![](.gitbook/assets/image%20%2835%29.png)
+![](.gitbook/assets/image%20%2837%29.png)
 
 4. 정책을 확인합니다.
 
 새로운 정책이 정상적으로 추가되었는지 확인합니다.
 
-![](.gitbook/assets/image%20%2813%29.png)
+![](.gitbook/assets/image%20%2814%29.png)
 
 hawkeye 사용자는 AWS 관리형 정책 - AmazonEC2FullAccess 권한을 통해 CloudWatch의 권한을 허용 받았지만, 인라인 정책에서 CloudWatch에 대한 명시적 접근 거부가 설정되어, 거부 권한이 동작하게 됩니다.
 
@@ -195,7 +195,7 @@ hawkeye 사용자는 AWS 관리형 정책 - AmazonEC2FullAccess 권한을 통해
 
 Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 
-![](.gitbook/assets/image%20%2840%29.png)
+![](.gitbook/assets/image%20%2842%29.png)
 
 ## 그룹 정책
 
@@ -215,17 +215,17 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 
 
 
-![](.gitbook/assets/image%20%2827%29.png)
+![](.gitbook/assets/image%20%2829%29.png)
 
 ![](.gitbook/assets/image%20%288%29.png)
 
-![](.gitbook/assets/image%20%2831%29.png)
+![](.gitbook/assets/image%20%2833%29.png)
 
 ### 그룹 정책과 사용자 정책 관계 확인
 
-![](.gitbook/assets/image%20%2841%29.png)
+![](.gitbook/assets/image%20%2843%29.png)
 
-![](.gitbook/assets/image%20%2832%29.png)
+![](.gitbook/assets/image%20%2834%29.png)
 
 ## Permissions Boundary
 
@@ -241,7 +241,7 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 
 ![](.gitbook/assets/image%20%282%29.png)
 
-![](.gitbook/assets/image%20%2854%29.png)
+![](.gitbook/assets/image%20%2856%29.png)
 
-![](.gitbook/assets/image%20%2837%29.png)
+![](.gitbook/assets/image%20%2839%29.png)
 
