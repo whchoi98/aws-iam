@@ -47,7 +47,7 @@ Role Switch는 역할을 이용해서 간단하게 , 필요한 역할을 그룹�
 
 EC2FullAccess,S3FullAccess 정책을 선택합니다.
 
-![](.gitbook/assets/image%20%2893%29.png)
+![](.gitbook/assets/image%20%2894%29.png)
 
 ### 5.역할 이름 구성
 
@@ -107,21 +107,47 @@ EC2FullAccess,S3FullAccess 정책을 선택합니다.
 
 ![](.gitbook/assets/image%20%2887%29.png)
 
+앞서 생성한 고객관리형 기반 정책으로 만들어진, 위임을 위한 정책을 선택합니다.
+
 ![](.gitbook/assets/image%20%2857%29.png)
 
+### 9. 사용자에 관리형정책 확인
+
+사용자에 정상적으로 관리형 정책이 할당되었는지 확인합니다.
+
 ![](.gitbook/assets/image%20%2873%29.png)
+
+### 10. 사용자 재로그인과 역할 전환
+
+위임정책이 할당된 사용자 "thor"로 로그인을 합니다. 로그인 후에 메뉴 상단의 사용자를 선택하고 **역할 전환\(Role Switch\)**를 선택합니다.
 
 ![](.gitbook/assets/image%20%2889%29.png)
 
 ![](.gitbook/assets/image%20%2874%29.png)
 
+현재 계정번호와 새롭게 생성한 역할\(Role\)을 입력합니다.
+
+* **계정 - 현재 계정번호**
+* **역할 - 새롭게 생성한 역할\(Role\)이름**
+* **색상 - 원하는 색상을 선택.**
+
 ![](.gitbook/assets/image%20%2883%29.png)
+
+### 11. 역할 전환 확인
+
+이제 역할이 정상적으로 전환되었는지 메뉴 상단을 확인합니다. 역할이름과 계정번호로 전환된 것을 확인 할 수 있습니다.
 
 ![](.gitbook/assets/image%20%2884%29.png)
 
+사용자 "thor"에게는 S3 버킷을 생성할 수 있는 권한이 없었습니다. 역할 전환을 통해 정상적으로 새로운 역할을 부여 받았는지 확인합니다. S3 버킷을 생성해 봅니다. 정상적으로 생성된 것을 확인할 수 있습니다.
+
 ![](.gitbook/assets/image%20%2875%29.png)
 
+{% hint style="info" %}
+아래는 역할 전환에 대한 소개 그림입니다. 역할 전환은 AWS 자원, 사용자 계정, 그룹등에 다양하게 사용되며, STS assumerole을 통해 안전하게 단기 임시 보안 Token을 사용할 수 있습니다. 이러한 방식은 자원등에 보안정보를 바인딩하지 않아도 되므로 보안도 강화할 수 있습니다.
+{% endhint %}
 
+![](.gitbook/assets/image%20%2890%29.png)
 
 ## 교차계정 Role Switch
 
