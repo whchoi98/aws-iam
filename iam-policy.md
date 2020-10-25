@@ -103,7 +103,7 @@ IAM 정책 시뮬레이션은 현재 적용된 정책이 어떤 권한을 가지
 
 예를 들어 아래와 같이 각 사용자들에 대해서 정책과 권한을 할당합니다. 사용자 doctor 와 spiderman, captain과 thanos은 동일한 permission Policy를 가지게 되므로, 구성시에 "기존 사용자에서 권한 복사"를 활용해 봅니다.
 
-![](.gitbook/assets/image%20%2880%29.png)
+![](.gitbook/assets/image%20%2884%29.png)
 
 | User | Permission Policies |
 | :--- | :--- |
@@ -277,7 +277,7 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 
 모두 추가하면 아래와 같이 그룹에 추가된 사용자의 수를 확인할 수 있습니다.
 
-![](.gitbook/assets/image%20%2881%29.png)
+![](.gitbook/assets/image%20%2885%29.png)
 
 ### 3. 그룹 정책과 사용자 정책 관계 확인
 
@@ -307,7 +307,7 @@ Cloudwatch 의 메뉴들을 정상적으로 볼 수 없게 됩니다.
 
 ### 1. 권한 경계 설정
 
-![](.gitbook/assets/image%20%2882%29.png)
+![](.gitbook/assets/image%20%2886%29.png)
 
 "thanos"는 앞서 "SuperUser" 그룹에 속해 있었습니다. 특정한 목적으로 "SuperUser"그룹에서 "thanos"의 정책권한을 축소하려고 합니다. 이때 권한경계 정책을 통해 적용해 봅니다.
 
