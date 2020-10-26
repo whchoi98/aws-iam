@@ -17,11 +17,11 @@
 * dev2-msa-01
 * dev2-msa-02
 
-![](.gitbook/assets/image%20%28143%29.png)
+![](.gitbook/assets/image%20%28144%29.png)
 
 아래와 같이 만들어진 EC2 인스턴스의 Tag를 구성합니다.
 
-![](.gitbook/assets/image%20%28136%29.png)
+![](.gitbook/assets/image%20%28137%29.png)
 
 | EC2 Instance | Tag Key | Tag Value |
 | :--- | :--- | :--- |
@@ -42,11 +42,11 @@ arn:aws:iam::ACCOUNT-ID:role/ROLE-NAME
 
 
 
-![](.gitbook/assets/image%20%28147%29.png)
+![](.gitbook/assets/image%20%28148%29.png)
 
 dev1-sts-assume 정책
 
-![](.gitbook/assets/image%20%28145%29.png)
+![](.gitbook/assets/image%20%28146%29.png)
 
 ```text
 {
@@ -66,7 +66,7 @@ dev1-sts-assume 정책
 }
 ```
 
-![](.gitbook/assets/image%20%28139%29.png)
+![](.gitbook/assets/image%20%28140%29.png)
 
 dev2-sts-assume 정책
 
@@ -88,7 +88,7 @@ dev2-sts-assume 정책
 }
 ```
 
-![](.gitbook/assets/image%20%28134%29.png)
+![](.gitbook/assets/image%20%28135%29.png)
 
 EC2에 접근하기 위한 역할\(Role\)에 대한 정책을 구성합니다.
 
@@ -126,9 +126,9 @@ EC2에 접근하기 위한 역할\(Role\)에 대한 정책을 구성합니다.
 }
 ```
 
-![](.gitbook/assets/image%20%28140%29.png)
+![](.gitbook/assets/image%20%28141%29.png)
 
-![](.gitbook/assets/image%20%28142%29.png)
+![](.gitbook/assets/image%20%28143%29.png)
 
 ```text
 {
@@ -163,31 +163,33 @@ EC2에 접근하기 위한 역할\(Role\)에 대한 정책을 구성합니다.
 }
 ```
 
-![](.gitbook/assets/image%20%28128%29.png)
+![](.gitbook/assets/image%20%28129%29.png)
 
  역할 정의
 
-![](.gitbook/assets/image%20%28129%29.png)
+![](.gitbook/assets/image%20%28130%29.png)
 
-![](.gitbook/assets/image%20%28141%29.png)
+![](.gitbook/assets/image%20%28142%29.png)
 
 ![](.gitbook/assets/image%20%28125%29.png)
 
-![](.gitbook/assets/image%20%28132%29.png)
-
-![](.gitbook/assets/image%20%28148%29.png)
+![](.gitbook/assets/image%20%28133%29.png)
 
 ![](.gitbook/assets/image%20%28149%29.png)
 
-![](.gitbook/assets/image%20%28137%29.png)
-
-![](.gitbook/assets/image%20%28151%29.png)
-
-![](.gitbook/assets/image%20%28133%29.png)
-
-![](.gitbook/assets/image%20%28144%29.png)
+![](.gitbook/assets/image%20%28150%29.png)
 
 ![](.gitbook/assets/image%20%28138%29.png)
+
+![](.gitbook/assets/image%20%28128%29.png)
+
+![](.gitbook/assets/image%20%28152%29.png)
+
+![](.gitbook/assets/image%20%28134%29.png)
+
+![](.gitbook/assets/image%20%28145%29.png)
+
+![](.gitbook/assets/image%20%28139%29.png)
 
 
 
