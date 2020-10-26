@@ -2,7 +2,7 @@
 description: 'Update : 2020-10-25'
 ---
 
-# IAM Hands On Lab
+# AWS IAM Hands On Lab
 
 ![](.gitbook/assets/image%20%28153%29.png)
 
