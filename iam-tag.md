@@ -29,7 +29,7 @@ EC2 인스턴스의 생성방법은 [https://awskocaptain.gitbook.io/imd-general
 * dev2-msa-01
 * dev2-msa-02
 
-![](.gitbook/assets/image%20%28148%29.png)
+![](.gitbook/assets/image%20%28149%29.png)
 
 아래와 같이 만들어진 EC2 인스턴스의 추가적인 Tag를 구성합니다.
 
@@ -58,11 +58,11 @@ arn:aws:iam::ACCOUNT-ID:role/ROLE-NAME
 
 "AWS 관리 콘솔 - IAM - 정책 - 정책생성"을 선택하여, 각 목적에 맞는 위임정책을 생성합니다.
 
-![](.gitbook/assets/image%20%28152%29.png)
+![](.gitbook/assets/image%20%28153%29.png)
 
 dev1-sts-assume 정책을 아래와 같이 JSON 파일로 직접 생성합니다. 
 
-![](.gitbook/assets/image%20%28150%29.png)
+![](.gitbook/assets/image%20%28151%29.png)
 
 아래 코드를 복사해서 JSON 코드에 입력합니다.
 
@@ -114,7 +114,7 @@ dev1-sts-assume 정책을 아래와 같이 JSON 파일로 직접 생성합니다
 
 ### 3. 역할\(Role\)을 위한 정책 구성
 
-![](.gitbook/assets/image%20%28146%29.png)
+![](.gitbook/assets/image%20%28147%29.png)
 
 EC2에 접근하기 위한 역할\(Role\)에 대한 정책을 구성합니다. 미리 생성된 4개의 인스턴스는 이미 2개의 그룹으로 나뉘어져 있습니다. 1개는 Dev1 그룹 개발자들이 인스턴스에 접속할 수 있도록 정책을 구성하고, 1개는 Dev2 그룹 개발자들이 인스턴스에 접속할 수 있도록 정책을 구성합니다.
 
@@ -158,7 +158,7 @@ JSON 편집기를 통해 위의 코드를 복사해서 붙여넣습니다.
 
 정책의 이름을 "dev1-role-policy"라고 정의합니다.
 
-![](.gitbook/assets/image%20%28147%29.png)
+![](.gitbook/assets/image%20%28148%29.png)
 
 아래 JSON Code는 Dev2 그룹이 위임정책을 통해 Role에 접근할 때 , 연결될 정책입니다.  EC2 인스턴스의 "tag key -team, value - dev2", "tag key - project, value - msa" 태그가 있는 경우 접속을 허용합니다.
 
@@ -201,7 +201,7 @@ JSON 편집기를 통해 위의 코드를 복사해서 붙여넣습니다.
 
 ### 4. 역할 만들기
 
-![](.gitbook/assets/image%20%28145%29.png)
+![](.gitbook/assets/image%20%28146%29.png)
 
  이제 역할을 정의합니다. 
 
@@ -217,14 +217,14 @@ JSON 편집기를 통해 위의 코드를 복사해서 붙여넣습니다.
 
 ![](.gitbook/assets/image%20%28134%29.png)
 
-![](.gitbook/assets/image%20%28153%29.png)
+![](.gitbook/assets/image%20%28154%29.png)
 
 이제 생성된 각 dev1-role, dev2-role에 정책을 연결해 줍니다.
 
 * dev1-role : dev1-role-policy
 * dev2-role : dev2-role-policy
 
-![](.gitbook/assets/image%20%28154%29.png)
+![](.gitbook/assets/image%20%28155%29.png)
 
 ![](.gitbook/assets/image%20%28140%29.png)
 
@@ -245,7 +245,7 @@ dev1-role,dev2-role에 태그를 설정합니다.
 
 그룹을 선택합니다.
 
-![](.gitbook/assets/image%20%28156%29.png)
+![](.gitbook/assets/image%20%28157%29.png)
 
 해당그룹의 **"권한-정책연결"**을 선택합니다.
 
@@ -253,7 +253,7 @@ dev1-role,dev2-role에 태그를 설정합니다.
 
 각 그룹에 적절한 정책을 선택합니다. 
 
-![](.gitbook/assets/image%20%28149%29.png)
+![](.gitbook/assets/image%20%28150%29.png)
 
 정상적으로 정책이 연결되었는지 확인합니다.
 
